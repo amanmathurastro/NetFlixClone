@@ -1,0 +1,26 @@
+@import "../src/common/color.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  background-color: $primary-color;
+}
+
+.container {
+  padding: 10px;
+}
+// .app-header {
+//   height: 10;
+// }
+// .container {
+//   height: 90vh;
+// }
+
+// .app-footer {
+//   height: 10vh;
+// }
