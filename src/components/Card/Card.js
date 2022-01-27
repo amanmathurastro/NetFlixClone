@@ -1,7 +1,7 @@
 import React from "react";
-import "./MovieCard.scss";
+import "./Card.scss";
 
-const MovieCard = (props) => {
+const Card = (props) => {
   const { Title, Poster, Year } = props.data;
   return (
     <div className="card-item">
@@ -20,4 +20,4 @@ const MovieCard = (props) => {
   );
 };
 
-export default MovieCard;
+export default Card;

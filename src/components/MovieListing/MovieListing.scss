@@ -1,10 +1,14 @@
 @import "../../common/color.scss";
 
+.wrapper {
+  margin-bottom: 30px;
+}
+
 .heading {
   color: $font-primary;
 }
 
-.movie-card {
+.card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   grid-gap: 15px;
