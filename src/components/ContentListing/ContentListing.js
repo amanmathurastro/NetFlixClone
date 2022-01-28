@@ -3,25 +3,25 @@ import { useSelector } from "react-redux";
 import { getAllMovies } from "../../store/movieSlice/movieSlice";
 import { getAllShows } from "../../store/showSlice/showSlice";
 import Card from "../Card/Card";
-import "./MovieListing.scss";
+import "./ContentListing.scss";
 
-const MovieListing = (props) => {
-  let datatype = props.datatype;
-  console.log(datatype);
+const ContentListing = (props) => {
+  let contentType = props.datatype;
+  console.log(contentType);
   let getData;
 
-  if (datatype === "movies") {
+  if (contentType === "movies") {
     getData = getAllMovies;
-  } else if (datatype === "shows") {
+  } else if (contentType === "shows") {
     getData = getAllShows;
   }
 
-  const stateData = useSelector(getData);
+  const contentResponseArr = useSelector(getData);
   // console.log(stateData);
   let render = "";
   render =
-    stateData.Response === "True" ? (
-      stateData.Search.map((dataElm, index) => {
+    contentResponseArr.Response === "True" ? (
+      contentResponseArr.Search.map((dataElm, index) => {
         return <Card key={index} data={dataElm} />;
       })
     ) : (
@@ -33,11 +33,11 @@ const MovieListing = (props) => {
   return (
     <div className="wrapper">
       <div className="heading">
-        <h2>{datatype.toUpperCase()}</h2>
+        <h2>{contentType.toUpperCase()}</h2>
       </div>
       <div className="card">{render}</div>
     </div>
   );
 };
 
-export default MovieListing;
+export default ContentListing;

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import MovieListing from "../MovieListing/MovieListing";
+import ContentListing from "../ContentListing/ContentListing";
 import { useDispatch } from "react-redux";
 import { fetchAsyncMovies } from "../../store/movieSlice/movieSlice";
 import { fetchAsyncShows } from "../../store/showSlice/showSlice";
@@ -14,8 +14,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      <MovieListing datatype="movies" />
-      <MovieListing datatype="shows" />
+      <ContentListing datatype="movies" />
+      <ContentListing datatype="shows" />
     </div>
   );
 };
