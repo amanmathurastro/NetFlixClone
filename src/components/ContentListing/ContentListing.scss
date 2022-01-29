@@ -1,11 +1,12 @@
 @import "../../common/color.scss";
 
 .wrapper {
-  margin-bottom: 30px;
-}
-
-.heading {
-  color: $font-primary;
+  margin: 20px 0px;
+  h2 {
+    color: $font-secondary;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
 }
 
 .card {
