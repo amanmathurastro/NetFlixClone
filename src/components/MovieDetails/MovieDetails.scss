@@ -1,0 +1,38 @@
+@import "../../common/color.scss";
+
+.movies-section {
+  display: flex;
+  justify-content: space-around;
+
+  margin: 10px;
+  padding: 10px 10px;
+  color: $font-primary;
+}
+
+.movie-rightsection {
+  padding: 20px;
+}
+
+.movie-rating {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.rating {
+  padding-right: 10px;
+}
+.voting {
+  padding-right: 10px;
+}
+.fa {
+  padding-right: 10px;
+
+  color: gold;
+}
+.movie-plot {
+  font-size: 40px;
+}
+.plot {
+  font-size: 35px;
+}

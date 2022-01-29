@@ -3,7 +3,10 @@ import moviesReducer from "../../src/store/movieSlice/movieSlice";
 import showsReducers from "../../src/store/showSlice/showSlice";
 
 const store = configureStore({
-  reducer: { movies: moviesReducer, shows: showsReducers },
+  reducer: {
+    movies: moviesReducer,
+    shows: showsReducers,
+  },
 });
 
 export default store;
