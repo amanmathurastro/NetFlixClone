@@ -14,6 +14,7 @@ const Header = () => {
     dispatch(fetchAsyncMovies(inputText));
     dispatch(fetchAsyncShows(inputText));
     setInputText("");
+    
   };
   const inputSearchHandler = (event) => {
     setInputText(event.target.value);

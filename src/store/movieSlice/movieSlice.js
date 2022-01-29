@@ -27,6 +27,7 @@ export const fetchAsyncMoviesOrShowDeatils = createAsyncThunk(
 const initialState = {
   movies: {},
   selectedMovieOrShow: {},
+  isLoading: false,
 };
 
 const movieSlice = createSlice({
@@ -41,30 +42,37 @@ const movieSlice = createSlice({
     },
   },
   extraReducers: {
-    [fetchAsyncMovies.pending]: () => {
+    [fetchAsyncMovies.pending]: (state, action) => {
       //loading state will show
 
       console.log("Fetching data from API");
+      return { ...state, isLoading: true };
     },
 
     [fetchAsyncMovies.fulfilled]: (state, action) => {
       console.log("Fetched Successfully");
-      return { ...state, movies: action.payload };
+
+      return { ...state, movies: action.payload, isLoading: false };
     },
 
-    [fetchAsyncMovies.rejected]: () => {
+    [fetchAsyncMovies.rejected]: (state, action) => {
       /// rejected state
 
       console.log("Request Rejected from API");
     },
-    [fetchAsyncMoviesOrShowDeatils.pending]: () => {
+    [fetchAsyncMoviesOrShowDeatils.pending]: (state, action) => {
       //loading state will show
-
       console.log("Fetching data from API");
+      return { ...state, isLoading: true };
     },
+
     [fetchAsyncMoviesOrShowDeatils.fulfilled]: (state, action) => {
       console.log("Fetched Successfully");
-      return { ...state, selectedMovieOrShow: action.payload };
+      return {
+        ...state,
+        selectedMovieOrShow: action.payload,
+        isLoading: false,
+      };
     },
   },
 });
